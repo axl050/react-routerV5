@@ -8,6 +8,7 @@ const ConceptosBasicos = () => {
   return (
     <div>
       <h2>Conceptos Basicos</h2>
+      <h2>Conceptos Basico</h2>
 
       <Routes>
         <Route path="/" element={<h2>Home</h2>}></Route>
