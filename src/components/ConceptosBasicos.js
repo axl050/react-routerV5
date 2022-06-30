@@ -6,6 +6,10 @@ import Error404 from "../pages/Error404";
 import MenuConceptos from "../components/MenuConceptos";
 import Usuario from "../pages/Usuario";
 import Productos from "../pages/Productos";
+import ReactTipics from "./ReactTopics";
+import Login from "../pages/Login";
+import DashBoard from "../pages/Dashboard";
+import PrivateRoute from "../components/PrivateRoute";
 
 const ConceptosBasicos = () => {
   return (
@@ -26,6 +30,10 @@ const ConceptosBasicos = () => {
           <Route exact path="/contact">
             <Redirect to="contacto" />
           </Route>
+          <Route path="/react" component={ReactTipics} />
+          <Route exact path="/login" component={Login} />
+          {/* <Route exact path="/dashboard" component={DashBoard} /> */}
+          <PrivateRoute exact path="/dashboard" component={DashBoard} />
           <Route exact path="*" component={Error404} />
         </Switch>
       </BrowserRouter>
